@@ -17,7 +17,7 @@ const Home: NextPage = () => {
           <div className="flex bg-[#222222] rounded-3xl w-[1000px] p-10">
             <div className="flex flex-col flex-1 items-center justify-center border-r border-[#555] pr-10">
                 <h2 className="text-2xl font-medium leading-normal mb-5 text-white">
-                  Kombinera PDF filer!
+                  PDF Merger
                 </h2>
                 <form action="/merge" method="POST" className="flex flex-col" >
                     <div className="my-[10px] w-full">
@@ -64,10 +64,10 @@ const InfoSection = ({
   description,
 }: InfoSectionProps) => {
   return (
-    <section className="mt-10 mb-10 relative">
+    <section className="mt-10 mb-10 relative pl-[30px]">
         <FontAwesomeIcon icon={icon} className="text-main-blue absolute left-0 top-[5px]"/>
-        <h3 className="text-lg">{title}</h3>
-        <p className="text-sm">{description}</p>
+        <h3 className="text-lg font-medium">{title}</h3>
+        <p className="text-sm leading-[1.8]">{description}</p>
     </section>
   );
 };
