@@ -14,8 +14,8 @@ const Home: NextPage = () => {
 
       <main className="flex items-center justify-center h-screen bg-[#171717] text-white">
 
-          <div className="flex bg-[#222222] rounded-3xl w-[1000px] p-10">
-            <div className="flex flex-col flex-1 items-center justify-center border-r border-[#555] pr-10">
+          <div className="flex flex-col md:flex-row bg-[#222222] rounded-3xl w-[1000px] p-10 m-10">
+            <div className="flex flex-col flex-1 items-center justify-center md:border-r border-[#555] md:pr-10">
                 <h2 className="text-2xl font-medium leading-normal mb-5 text-white">
                   PDF Merger
                 </h2>
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
                         <input className="mt-5 mb-5 p-[10px] rounded-md bg-main-blue" type="submit" value="Kombinera"/>
                 </form>
             </div>
-            <div className="pl-10 flex-[1.5]">
+            <div className="md:pl-10 flex-[1.5]">
                 <InfoSection
                     icon={faArrowDownAZ}
                     title="Förbered dina filer"
