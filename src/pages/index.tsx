@@ -15,16 +15,16 @@ const Home: NextPage = () => {
       <main className="flex items-center justify-center h-screen bg-[#171717] text-white">
 
           <div className="flex bg-[#222222] rounded-3xl w-[1000px] p-10">
-            <div className="flex flex-col items-center justify-center border-r border-[#555]">
+            <div className="flex flex-col flex-1 items-center justify-center border-r border-[#555] pr-10">
                 <h2 className="text-2xl font-medium leading-normal mb-5 text-white">
                   Kombinera PDF filer!
                 </h2>
-                <form action="/merge" method="POST" >
-                    <div className="my-[10px] flex flex-col w-full">
-                        <label className="font-medium">Välj dina filer:</label>
-                        <input className="w-full" type="file" name="pdffiles[]" accept="application/pdf"/>
+                <form action="/merge" method="POST" className="flex flex-col" >
+                    <div className="my-[10px] w-full">
+                        <label className="font-medium mb-1 inline-block">Välj dina filer:</label>
+                        <input className="w-full p-[10px] bg-transparent border-2 border-main-blue rounded-md" type="file" name="pdffiles[]" accept="application/pdf"/>
                     </div>
-                        <input type="submit" value="Kombinera"/>
+                        <input className="mt-5 mb-5 p-[10px] rounded-md bg-main-blue" type="submit" value="Kombinera"/>
                 </form>
             </div>
             <div className="pl-10 flex-[1.5]">
