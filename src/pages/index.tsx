@@ -1,5 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { faArrowDownAZ, faFilePdf, faUpload } from '@fortawesome/free-solid-svg-icons'
 
 const Home: NextPage = () => {
   return (
@@ -7,7 +10,6 @@ const Home: NextPage = () => {
       <Head>
         <title>PDF Merger</title>
         <meta name="description" content="A simple app for merging pdf files" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="flex items-center justify-center h-screen bg-[#171717] text-white">
@@ -27,17 +29,17 @@ const Home: NextPage = () => {
             </div>
             <div className="pl-10 flex-[1.5]">
                 <InfoSection
-                    icon="a"
+                    icon={faArrowDownAZ}
                     title="Förbered dina filer"
                     description="Se till att ha döpt dina filer i den ordning du vill att de ska komma i dokumentet. Tex Sida1.pdf Sida2.pdf osv."
                 />
                 <InfoSection
-                    icon="a"
+                    icon={faUpload}
                     title="Ladda upp för att kombinera"
                     description="Ladda upp dina pdf filer till vänster för att kombinera dom till en fil. Välj flera filer genom att hålla in CTRL och klicka på de filer som ska kombineras."
                 />
                 <InfoSection
-                    icon="a"
+                    icon={faFilePdf}
                     title="Kombinerad fil"
                     description="Din nya pdf fil öppnas automatiskt där du kan kolla igenom att allt stämmer och ladda ner den"
                 />
@@ -51,7 +53,7 @@ const Home: NextPage = () => {
 export default Home;
 
 type InfoSectionProps = {
-  icon: string;
+  icon: IconProp;
   title: string;
   description: string;
 };
@@ -62,10 +64,10 @@ const InfoSection = ({
   description,
 }: InfoSectionProps) => {
   return (
-    <section className="mt-10 mb-10">
-        <i>{icon}</i>
-        <h3 className="text-lg ">{title}</h3>
-        <p className="text-sm ">{description}</p>
+    <section className="mt-10 mb-10 relative">
+        <FontAwesomeIcon icon={icon} className="text-main-blue absolute left-0 top-[5px]"/>
+        <h3 className="text-lg">{title}</h3>
+        <p className="text-sm">{description}</p>
     </section>
   );
 };
