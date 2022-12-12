@@ -20,4 +20,14 @@ export default defineNextConfig({
     locales: ["en"],
     defaultLocale: "en",
   },
+    async redirects() {
+        return [
+            {
+                source: '/powerhour',
+                destination: 'https://ddg.gg',
+                permanent: true,
+            }
+        ]
+
+    }
 });
