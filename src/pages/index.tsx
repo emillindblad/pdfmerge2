@@ -62,10 +62,10 @@ const InfoSection = ({
     icon,
     title,
     description,
-}: InfoSectionProps) => {
+}: InfoSectionProps ) => {
     return (
         <section className="mt-10 mb-10 relative pl-[30px]">
-            <FontAwesomeIcon icon={icon} className="text-main-blue absolute left-0 top-[5px]"/>
+            <FontAwesomeIcon icon={icon} width="16" className="text-main-blue absolute left-0 top-[5px]"/>
             <h3 className="text-lg font-medium">{title}</h3>
             <p className="text-sm leading-[1.8]">{description}</p>
         </section>
