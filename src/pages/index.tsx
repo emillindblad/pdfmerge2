@@ -1,15 +1,18 @@
-import type { NextPage } from "next";
+import { type NextPage } from "next";
 import Head from "next/head";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { type IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faArrowDownAZ, faFilePdf, faUpload } from '@fortawesome/free-solid-svg-icons'
 
 const Home: NextPage = () => {
+
     return (
         <>
             <Head>
                 <title>PDF Merger</title>
                 <meta name="description" content="A simple app for merging pdf files" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <main className="flex items-center justify-center h-screen bg-[#171717] text-white">
