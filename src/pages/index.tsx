@@ -1,10 +1,19 @@
-import type { NextPage } from "next";
+import { type NextPage } from "next";
 import Head from "next/head";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { type IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faArrowDownAZ, faFilePdf, faUpload } from '@fortawesome/free-solid-svg-icons'
 
+import { api } from "../utils/api";
+
 const Home: NextPage = () => {
+
+    const hello = api.example.hello.useQuery({
+        text: "yooo"
+    })
+
+
     return (
         <>
             <Head>
@@ -19,6 +28,7 @@ const Home: NextPage = () => {
                         <h2 className="text-2xl font-medium leading-normal mb-5 text-white">
                             PDF Merger
                         </h2>
+                        <p>{hello.data ? hello.data.greeting : "Loading tRPC"}</p>
                         <form action="/merge" method="POST" className="flex flex-col" >
                             <div className="my-[10px] w-full">
                                 <label className="font-medium mb-1 inline-block">Välj dina filer:</label>
