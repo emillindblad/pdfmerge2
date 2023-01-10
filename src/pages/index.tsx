@@ -19,6 +19,7 @@ const Home: NextPage = () => {
             <Head>
                 <title>PDF Merger</title>
                 <meta name="description" content="A simple app for merging pdf files" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <main className="flex items-center justify-center h-screen bg-[#171717] text-white">
